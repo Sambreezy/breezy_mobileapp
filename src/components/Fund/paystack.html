@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Paystack</title>
+
+        <script src="https://js.paystack.co/v1/inline.js"></script>
+       
+
+        <script>
+            function payWithPayStack(amount, email, ref, publicKey) {
+                  
+                    var handler = PaystackPop.setup({
+                        key: publicKey,
+                        email: email,
+                        amount:  parseFloat(amount) * 100,
+                        currency: "NGN",
+                        ref,
+                        metadata: {
+                        custom_fields: [
+                            {
+                                value: ''
+                            }
+                        ]
+                        },
+                        callback: function(response){
+                            
+                            window.postMessage(JSON.stringify({
+                                reference: response.reference, 
+                                message: 'Transaction Successful', 
+                                status: 'success'
+                            }));
+                        },
+                        onClose: function(){
+                            window.postMessage(JSON.stringify({
+                                reference: '', 
+                                message: 'Transaction Cancelled by user',
+                                status: 'failed'
+                            }));
+                        }
+                    });
+                    handler.openIframe();
+                }
+
+            document.addEventListener("message", function(data) {
+                
+                var details = JSON.parse(data.data);
+                payWithPayStack(details.amount, details.email, details.ref, details.publicKey);
+            });
+
+        </script>
+
+        <script>
+            if (document.readyState === "complete") {
+              
+             }
+        </script>
+    </head>
+    </body>
+</html>

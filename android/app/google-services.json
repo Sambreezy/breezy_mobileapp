@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "993441260751",
+    "firebase_url": "https://ogwugo-221917.firebaseio.com",
+    "project_id": "ogwugo-221917",
+    "storage_bucket": "ogwugo-221917.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:993441260751:android:2e434ced07d52f77",
+        "android_client_info": {
+          "package_name": "com.xend.food"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "993441260751-0qvimmut2is63rpruk4du7uhm3ntv20a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.xend.food",
+            "certificate_hash": "fac171154242953ee2e97f2569e5f9009be81529"
+          }
+        },
+        {
+          "client_id": "993441260751-2q5tepl3tks4qcl5j3cgifosndjelg8k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2tw7fRkQLsATAGKy7do5kJ5BPYJ4RC2E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "993441260751-2q5tepl3tks4qcl5j3cgifosndjelg8k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
